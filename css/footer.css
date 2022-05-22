@@ -1,0 +1,59 @@
+footer{
+    text-align: center;
+    padding: -30pt;
+    background-color: #bfbfbf;
+    color: white;
+}
+footer .footer_main {
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: none;
+    color: #fff;
+}
+footer .footer_main .dot{
+    height: 50px;
+    width: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 25px;
+
+}
+footer .random_names {
+    text-align: center;
+    width: 100%;
+    word-spacing: 5px;
+    text-decoration: none;
+    color: #2da8c9;
+}
+footer .copyright_2015{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    border-style: none;
+}
+footer .nav{
+    list-style: none;
+    display: inline-block;
+    padding-left: -5px;
+    margin: 0px;
+    font-size: 25px;
+    padding: 10px 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal ;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+footer .nav li{
+    display: inline-block;
+}
+footer .nav li a{
+    color: #fff;
+}
+footer .copyright {
+    margin-block-end: 0px;
+    font-size: 15px;
+}
+footer .footer_main a{
+    text-decoration: none;
+}
