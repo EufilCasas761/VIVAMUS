@@ -1,0 +1,70 @@
+@media screen and (max-width: 1034px) {
+    
+    /* Header */ 
+    nav{
+        background: skyblue;
+        padding: 30px 33px 41px 70px;
+        border: 1px solid none;
+        border-left: none;
+        border-right: none;
+        height: 100px;
+    }
+    nav ul{
+        display: flex;
+        list-style:  none;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    nav ul li.logo img{
+        display: none;
+    }
+    nav ul div.items{
+        flex: 3.5;
+    }
+    nav ul div.items a {
+        flex: 2;
+        float: left;
+        position: relative;
+        justify-content: space-between;
+    }
+    nav ul .search_icon{
+        flex: 1;
+    }
+    nav ul .search_icon input{
+        height: 100%;
+        width: 150px;
+        border: none;
+        border-radius: 5px 5px;
+        color: black;
+        outline: none;
+    }
+
+    /* Heading */
+    .heading1 .head{
+        font-size: 40px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        margin-top: 10px;
+        text-align: center;
+        word-spacing: 35px;
+        letter-spacing: 1px;
+    }
+    .heading1 .par{
+        font-size: 25px;
+        text-align: center;
+        word-spacing: 3px;
+        letter-spacing: 1.5px;
+        border-bottom: 2px solid #849599;
+    }
+
+    /* Progress Bar */
+    .progressbar{
+        margin: 10px 100px 10px 100px;
+    }
+}
+@media screen and (max-width: 916px) {
+    nav ul div .ver-line {
+        display: none;
+    }
+}

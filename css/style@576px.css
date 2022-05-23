@@ -1,0 +1,75 @@
+@media screen and (max-width: 576px) {
+    
+    /*  Header  */
+    nav ul div.items .ver-line {
+        display: none;
+    }
+    
+    /*  Heading */
+    .heading1 .head{
+        font-size: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        margin-top: 10px;
+        text-align: center;
+        word-spacing: 35px;
+        letter-spacing: 1px;
+    }
+    .heading1 .par{
+        font-size: 15px;
+        text-align: center;
+        word-spacing: 3px;
+        letter-spacing: 1.5px;
+        border-bottom: 2px solid #849599;
+    }
+
+
+     /*  Progress Bar */
+     .progressbar{
+        margin: 10px 50px 10px 50px;
+    }
+
+
+    /*  Form */
+    .button-progress{
+        width: auto;
+    }
+    form{
+        width: auto;
+    }
+
+
+    /*  Step 2 */
+    .img-div{
+        height: auto;
+        width: 180px;
+        position: relative;
+        z-index: 1  ;
+    }
+    .input-group  .user-box5{
+        margin-left: 20px;
+        margin-top: 5px;
+    }
+    .input-group .user-title3{
+        margin: 20px 0 20px 35px;
+    }
+    
+}  
+@media screen and (max-width: 517px) {
+    /* Footer  */
+    footer .footer_main span.dot{
+        display: none;
+    }
+    footer .random_names {
+        word-spacing: 5px;
+        text-decoration: none;
+        color: #2da8c9;
+        margin-top: 20px;
+    }
+    footer ul.nav{
+        margin-top: 20px;
+    }
+
+}
+
+

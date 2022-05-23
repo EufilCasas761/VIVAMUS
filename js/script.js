@@ -1,4 +1,3 @@
-
 const prevBtns = document.querySelectorAll(".btn-prev");
 const nextBtns = document.querySelectorAll(".btn-next");
 const progress = document.getElementById("progress");
@@ -6,6 +5,16 @@ const formSteps = document.querySelectorAll(".form-step");
 const progressSteps = document.querySelectorAll(".progress-step");
 const headings = document.querySelectorAll(".heading1");
 const buttons = document.querySelectorAll(".btns-group");
+const form = document.getElementById('form');
+const firstname = document.getElementById('firstname');
+const lastname = document.getElementById('lastname');
+const email = document.getElementById('email');
+const mobilenumber = document.getElementById('mobilenumber');
+const donationamount = document.getElementById('amount');
+const holdername = document.getElementById('holdername');
+const cardnumber = document.getElementById('cardnumber');
+const securitycode = document.getElementById('securitycode');
+const date = document.getElementById('date');
 
 
 let formStepsNum = 0;
@@ -17,6 +26,7 @@ nextBtns.forEach((btn) => {
     updateProgressbar();
     updateButtons();
     updateHeading();
+    validateInputs();
   });
 });
 
@@ -28,6 +38,7 @@ prevBtns.forEach((btn) => {
     updateProgressbar();
     updateButtons();
     updateHeading();
+    validateInputs();
   });
 });
 
@@ -97,3 +108,98 @@ $("#creditcard").on('click',function(){
     $(".paypal").prop('hidden',true);
     $(".credit_card").prop('hidden',false);
 })
+
+const setError = (element, message) => {
+  const inputControl = element.parentElement;
+  const errorDisplay = inputControl.querySelector('.error');
+
+  errorDisplay.innerText = message;
+  inputControl.classList.add('error');
+  inputControl.classList.remove('success')
+}
+
+const setSuccess = element => {
+  const inputControl = element.parentElement;
+  const errorDisplay = inputControl.querySelector('.error');
+
+  errorDisplay.innerText = '';
+  inputControl.classList.add('success');
+  inputControl.classList.remove('error');
+};
+
+const isValidEmail = email => {
+  const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(String(email).toLowerCase());
+}
+
+const validateInputs = () => {
+  const firstnameValue = firstname.value.trim();
+  const lastnameValue = lastname.value.trim();
+  const emailValue = email.value.trim();
+  const mobilenumberValue = mobilenumber.value.trim();
+  const donationamountValue = amount.value.trim();
+  const holdernameValue = holdername.value.trim();
+  const cardnumberValue = cardnumber.value.trim();
+  const securitycodeValue = securitycode.value.trim();
+  const dateValue = date.value.trim();
+
+
+  if(firstnameValue === '') {
+      setError(firstname, 'First name is required');
+  }else{
+      setSuccess(firstname);
+  }
+  if(lastnameValue === '') {
+    setError(lastname, 'Last name is required');
+  } else {
+      setSuccess(lastname);
+  }
+
+  if(emailValue === '') {
+      setError(email, 'Email is required');
+  } else if (!isValidEmail(emailValue)) {
+      setError(email, 'Provide a valid email address');
+  } else {
+      setSuccess(email);
+  }
+
+  if(mobilenumberValue === '') {
+      setError(mobilenumber, 'Mobile number is required');
+  } else if (mobilenumberValue.length < 10 ) {
+      setError(mobilenumber, 'Mobile number must be at least 11 character.')
+  } else {
+      setSuccess(mobilenumber);
+  }
+
+  if(donationamountValue === ''){
+    setError(amount, 'Donation amount is required');
+  } else{
+    setSuccess(amount);
+  }
+  if(holdernameValue === '') {
+    setError(holdername, 'Card holder name is required');
+  }else{
+    setSuccess(holdername);
+  }
+
+  if(cardnumberValue === ''){
+    setError(cardnumber, 'Card number is required');
+  }else if(cardnumberValue.length < 15 ){
+    setError(cardnumber, 'Security code must be at least 15 characters')
+  }else{
+    setSuccess(cardnumber);
+  }
+  if(securitycodeValue === ''){
+    setError(securitycode, 'Card security code is required');
+  } else if(securitycodeValue.length < 8 ){
+    setError(securitycode, 'Security code must be at least 8 characters')
+  }
+  else{
+    setSuccess(securitycode);
+  }
+  if(dateValue === ''){
+    setError(date, 'Expiry date is required');
+  }else{
+    setSuccess(date);
+  }
+}

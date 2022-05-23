@@ -7,6 +7,9 @@
 	<title>VIVAMUS</title>
 	<link rel="icon" href="img/logo.png">
     <link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style@1034px.css">
+	<link rel="stylesheet" href="css/style@768px.css">
+	<link rel="stylesheet" href="css/style@576px.css">
     <link rel="stylesheet" href="css/footer.css">
 
     <script>
@@ -27,9 +30,9 @@
  		<ul>
  		<li class="logo"><img src="img/logo.png" alt="logo"></li>
             <div class="items">
-	            <li class="current"><a href="index.html">Bibendum</a><a>|</a></li>
-	            <li><a href="about.html">Sollicitudin</a><a>|</a>
-	            <li><a href="about.html">Metus</a><a>|</a>
+	            <li class="current"><a href="index.html">Bibendum</a><a class="ver-line" >|</a></li>
+	            <li><a href="about.html">Sollicitudin</a><a class="ver-line">|</a>
+	            <li><a href="about.html">Metus</a><a class="ver-line">|</a>
 	            <li><a href="about.html">Egestas</a>
             </div>
 	        <li class="search_icon items" id="search_bar">
@@ -72,24 +75,28 @@
  	<!--Steps -->
 	<div class="main_background1">
 		<div class="button-progress">
-			<form action="#" class="form">
+			<form name="myForm" action="#" class="form" id="form" onsubmit="return dataCheck(this)">
 				<div class="form-step form-step-active step-3">
 					<h1 class="title">About you</h1>
-					<div class="input-group user-box1">
+					<div class="input-group user-box1 input-control">
 						<label class="user-title1" for="firstname">First name*</label>
-						<input class="user-box1" type="text" name="firstname" id="firstname">			
+						<input class="user-box1" type="text" name="firstname" id="firstname">
+						<div class="error"></div>			
 					</div>
-					<div class="input-group user-box1">
+					<div class="input-group user-box1 input-control">
 						<label class="user-title1" for="lastname">Last name*</label>
-						<input class="user-box1" type="text" name="lastname" id="lastname">			
+						<input class="user-box1" type="text" name="lastname" id="lastname">
+						<div class="error"></div>			
 					</div>
-					<div class="input-group user-box3">
-						<label class="user-title1" for="email">Email Address</label>
+					<div class="input-group user-box3 input-control">
+						<label class="user-title1" for="email">Email Address*</label>
 						<input class="user-box1" type="email" name="email" id="email">
+						<div class="error"></div>	
 					</div>
-					<div class="input-group user-box3">
+					<div class="input-group user-box3 input-control">
 						<label class="user-title1" for="mobilenumber">Mobile Number*</label>
 						<input class="user-box1" type="text" name="mobilenumber" id="mobilenumber">	
+						<div class="error"></div>	
 					</div>
 				</div>
 				<div class="form-step step-2">
@@ -97,25 +104,30 @@
 				<div class="container-donation">
 					<div class="title1" id="title1"><a id="paypal">Paypal</a></div>
 					<div class="title2" id="title2"><a id="creditcard">Credit Card</a></div>
-						<div class="input-group user-box2">
+						<div class="input-group user-box2 input-control1">
 							<label class="user-title2" for="amount">Donation Amount*</label>
-							<input class="user-box2" type="text" name="amount" id="amount">			
+							<input class="user-box2" type="number" name="amount" id="amount">
+							<div class="error"></div>			
 						</div>
-						<div class="input-group user-box4">
+						<div class="input-group user-box4 input-control1">
 							<label class="user-title2" for="holdername">Card Holder Name*</label>
-							<input class="user-box4" type="text" name="holdername" id="holdername">			
+							<input class="user-box4" type="text" name="holdername" id="holdername">	
+							<div class="error"></div>		
 						</div>
-						<div class="input-group user-box4">
+						<div class="input-group user-box4 input-control1">
 							<label class="user-title2" for="cardnumber">Credit Card No*</label>
-							<input class="user-box4" type="text" name="cardnumber" id="cardnumber">
+							<input class="user-box4" type="number" name="cardnumber" id="cardnumber">
+							<div class="error"></div>
 						</div>
-						<div class="input-group user-box2">
+						<div class="input-group user-box2 input-control1">
 							<label class="user-title2" for="securitycode">Card Security Code*</label>
-							<input class="user-box2" type="password" name="securitycode" id="securitycode">			
+							<input class="user-box2" type="password" name="securitycode" id="securitycode">	
+							<div class="error"></div>		
 						</div>
-						<div class="input-group user-box2">
+						<div class="input-group user-box2 input-control1">
 							<label class="user-title2" for="date">Expiry Date*</label>
-							<input class="user-box2" type="date" name="date" id="date">			
+							<input class="user-box2" type="date" name="date" id="date">		
+							<div class="error"></div>	
 						</div>
 						<img src="img/visa_logo.png" class="img-div"> 
 					</div>	

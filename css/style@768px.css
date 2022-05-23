@@ -1,0 +1,99 @@
+@media screen and (max-width: 768px) {
+    nav{
+        background: skyblue;
+        padding: 10px 40px 10px 70px;
+        border: 1px solid none;
+        border-left: none;
+        border-right: none;
+        height: auto;
+    }
+    nav ul{
+        display: flex;
+        list-style:  none;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    nav ul li.logo{
+        flex: 1;
+        display: inline-flex;
+    }
+    nav ul li.logo img{
+        display: inline-flex;
+        padding: 1px; 
+        float: left;
+        object-fit: scale-down;
+        width: 130px;
+        height: 100px;
+        margin: 20px 0 30px 0;
+    }
+    .checkbtn{
+        font-size: 30px;
+        color: rgb(136, 109, 109);
+        float: right;
+        line-height: 80px;
+        margin-right: 40px;
+        cursor: pointer;
+        display: block;
+    }
+    ul .items{
+        position: absolute;
+        margin-top: 75px;
+        justify-content: center;
+        padding: 50px;
+        text-align: center;
+        width: 100%;
+        height: clamp(auto);
+        top: 90px;
+        left: -100%;
+        background: gray;
+        display: flex;
+        transition: all .5s;
+    }
+    #check:checked ~ ul div.items {
+        left: 0;
+    }
+    #check:checked ~ ul div#search_bar {
+        left: 0;
+    }
+    nav ul div.items a{
+        display: inline-block;
+        position: relative;
+    }
+    nav ul .search_icon {
+        margin-top: 120px;
+        float: center;
+    }
+    a:hover,a.active{
+        background: none;
+        color: #0082e6;
+    }
+    nav ul .items .show {
+        left: 0;
+    }
+
+    /*  Form */
+    form{
+        width: auto;
+    }
+
+    /* Footer */
+    footer .footer_main span.dot{
+        height: 40px;
+        width: 40px;
+        background-color: #fff;
+        border-radius: 50%;
+        display: inline-block;
+        margin: 25px;
+    
+    }
+}
+@media screen and (max-width: 746px) {
+    .button-progress{
+        height: auto;
+        width: auto;
+    }
+    form{
+        width: auto;
+    }
+}
