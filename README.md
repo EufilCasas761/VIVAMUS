@@ -10,3 +10,4 @@ COURSE: COMPUTER ENGINEERING
 SCHOOL:  Center for Industrial Technology and Enterprise (CITE) TECHNICAL INSTITUTE, INC.
 
 INSTRUCTOR: MR. RESTITUTO LOQUINARIO, JR.
+https://eufilcasas761.github.io/VIVAMUS/
