@@ -452,6 +452,7 @@ h1{
     width: 40%;
     align-content: center;
     margin-bottom: 20px;
+    height: 50px;
 }
 .btns-group{
     display: none;
